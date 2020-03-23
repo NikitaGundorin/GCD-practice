@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		725FB16B2428DD030016DFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB16A2428DD030016DFB5 /* AppDelegate.swift */; };
 		725FB16D2428DD030016DFB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB16C2428DD030016DFB5 /* SceneDelegate.swift */; };
-		725FB16F2428DD030016DFB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB16E2428DD030016DFB5 /* ViewController.swift */; };
+		725FB16F2428DD030016DFB5 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB16E2428DD030016DFB5 /* ImageViewController.swift */; };
 		725FB1722428DD030016DFB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FB1702428DD030016DFB5 /* Main.storyboard */; };
 		725FB1742428DD050016DFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FB1732428DD050016DFB5 /* Assets.xcassets */; };
 		725FB1772428DD050016DFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FB1752428DD050016DFB5 /* LaunchScreen.storyboard */; };
+		725FB1812428E59F0016DFB5 /* BlurImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB1802428E59F0016DFB5 /* BlurImageViewController.swift */; };
+		725FB1842428ECC30016DFB5 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FB1832428ECC30016DFB5 /* NumbersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		725FB1672428DD030016DFB5 /* GCD-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCD-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FB16A2428DD030016DFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		725FB16C2428DD030016DFB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		725FB16E2428DD030016DFB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		725FB16E2428DD030016DFB5 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		725FB1712428DD030016DFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		725FB1732428DD050016DFB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		725FB1762428DD050016DFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		725FB1782428DD050016DFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		725FB1802428E59F0016DFB5 /* BlurImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurImageViewController.swift; sourceTree = "<group>"; };
+		725FB1832428ECC30016DFB5 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		725FB1692428DD030016DFB5 /* GCD-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				725FB1822428ECA40016DFB5 /* NumbersModule */,
+				725FB17F2428E5770016DFB5 /* LoadAndBlurImageModule */,
+				725FB17E2428DD0C0016DFB5 /* LoadImageModule */,
 				725FB16A2428DD030016DFB5 /* AppDelegate.swift */,
 				725FB16C2428DD030016DFB5 /* SceneDelegate.swift */,
-				725FB16E2428DD030016DFB5 /* ViewController.swift */,
 				725FB1702428DD030016DFB5 /* Main.storyboard */,
 				725FB1732428DD050016DFB5 /* Assets.xcassets */,
 				725FB1752428DD050016DFB5 /* LaunchScreen.storyboard */,
 				725FB1782428DD050016DFB5 /* Info.plist */,
 			);
 			path = "GCD-Practice";
+			sourceTree = "<group>";
+		};
+		725FB17E2428DD0C0016DFB5 /* LoadImageModule */ = {
+			isa = PBXGroup;
+			children = (
+				725FB16E2428DD030016DFB5 /* ImageViewController.swift */,
+			);
+			path = LoadImageModule;
+			sourceTree = "<group>";
+		};
+		725FB17F2428E5770016DFB5 /* LoadAndBlurImageModule */ = {
+			isa = PBXGroup;
+			children = (
+				725FB1802428E59F0016DFB5 /* BlurImageViewController.swift */,
+			);
+			path = LoadAndBlurImageModule;
+			sourceTree = "<group>";
+		};
+		725FB1822428ECA40016DFB5 /* NumbersModule */ = {
+			isa = PBXGroup;
+			children = (
+				725FB1832428ECC30016DFB5 /* NumbersViewController.swift */,
+			);
+			path = NumbersModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725FB16F2428DD030016DFB5 /* ViewController.swift in Sources */,
+				725FB16F2428DD030016DFB5 /* ImageViewController.swift in Sources */,
+				725FB1842428ECC30016DFB5 /* NumbersViewController.swift in Sources */,
 				725FB16B2428DD030016DFB5 /* AppDelegate.swift in Sources */,
 				725FB16D2428DD030016DFB5 /* SceneDelegate.swift in Sources */,
+				725FB1812428E59F0016DFB5 /* BlurImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
